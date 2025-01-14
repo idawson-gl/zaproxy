@@ -11,9 +11,9 @@ jobs:
     if: github.actor == 'kingthorin' || github.actor == 'psiinon' || github.actor == 'thc202'
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@50fbc622fc4ef5163becd7fab6573eac35f8462e # v1
     - name: Build and Release
-      uses: docker://openjdk:8
+      uses: docker://index.docker.io/library/openjdk@sha256:86e863cc57215cfb181bd319736d0baf625fe8f150577f9eb58bd937f5452cb8 # 8
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         INSTALL4J_LICENSE: ${{ secrets.INSTALL4J_LICENSE }}
